@@ -3,10 +3,9 @@
   "name": "Nanoleaf (Segments)",
   "codeowners": ["@einseli"],
   "config_flow": true,
-  "documentation": "https://git.einseli.me/EinsEli/nanoleaf-segments",
+  "documentation": "https://github.com/EinsEli/nanoleaf-segments",
   "iot_class": "local_polling",
   "requirements": ["requests>=2.31.0"],
-  "version": "1.0.0",
-  "icon": "icon"
+  "version": "1.0.0"
 }
 
