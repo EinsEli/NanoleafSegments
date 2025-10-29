@@ -1,0 +1,28 @@
+set_multiple_segments:
+  name: Set Multiple Segments
+  description: Set colors for multiple segments in one fast API call (optimized for Ambilight)
+  fields:
+    entity_id:
+      name: Entity ID
+      description: Entity ID of the Nanoleaf Lines integration
+      required: true
+      selector:
+        entity:
+          domain: light
+    segment_colors:
+      name: Segment Colors
+      description: Dict of segment indices to RGB colors, e.g. {0:[255,0,0], 1:[0,255,0]}
+      required: true
+      example: "{0: [255, 0, 0], 1: [0, 255, 0], 2: [0, 0, 255]}"
+    transition:
+      name: Transition
+      description: Transition time in seconds
+      required: false
+      default: 0
+      selector:
+        number:
+          min: 0
+          max: 10
+          step: 0.1
+          unit_of_measurement: s
+

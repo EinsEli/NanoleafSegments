@@ -1,0 +1,51 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Nanoleaf Setup",
+        "description": "Geben Sie die IP-Adresse ein und wählen Sie die Einrichtungsmethode.",
+        "data": {
+          "host": "IP-Adresse",
+          "name": "Gerätename",
+          "pairing_mode": "Neues Gerät koppeln (Button drücken erforderlich)",
+          "create_groups": "Gruppen-Entities erstellen (empfohlen für Ambilight)"
+        }
+      },
+      "pair": {
+        "title": "Gerät koppeln",
+        "description": "Halten Sie jetzt die Power-Taste am Nanoleaf Controller für 5-7 Sekunden gedrückt, bis die LED blinkt. Klicken Sie dann auf Absenden."
+      },
+      "token": {
+        "title": "Token eingeben",
+        "description": "Geben Sie Ihr vorhandenes Auth-Token ein.",
+        "data": {
+          "token": "Auth Token"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung fehlgeschlagen. Bitte überprüfen Sie die IP-Adresse.",
+      "invalid_auth": "Ungültiges Token. Bitte überprüfen Sie Ihr Auth-Token.",
+      "pairing_timeout": "Pairing-Timeout. Bitte stellen Sie sicher, dass Sie die Power-Taste gedrückt haben.",
+      "unknown": "Unerwarteter Fehler aufgetreten."
+    },
+    "abort": {
+      "already_configured": "Dieses Nanoleaf-Gerät ist bereits konfiguriert."
+    }
+  },
+  "options": {
+    "step": {
+      "groups": {
+        "title": "Manuelle Gruppen konfigurieren",
+        "description": "Definieren Sie Gruppen von Segmenten. {num_segments} Segmente verfügbar.\n\nFormat: Gruppen durch Semikolon getrennt, Indizes innerhalb einer Gruppe durch Komma (0-basiert).\n\nBeispiel:\n{example}",
+        "data": {
+          "group_config": "Gruppen-Konfiguration"
+        }
+      }
+    },
+    "error": {
+      "invalid_group_config": "Ungültige Gruppen-Konfiguration. Bitte überprüfen Sie das Format."
+    }
+  }
+}
+

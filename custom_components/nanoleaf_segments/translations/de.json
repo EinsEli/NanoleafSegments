@@ -1,0 +1,60 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Nanoleaf Lines Einrichtung",
+        "description": "Geben Sie die IP-Adresse Ihres Nanoleaf Controllers ein und wählen Sie die Einrichtungsmethode.",
+        "data": {
+          "host": "IP-Adresse",
+          "name": "Gerätename",
+          "pairing_mode": "Neues Gerät koppeln (Button drücken erforderlich)",
+          "create_groups": "Gruppen-Entities erstellen"
+        },
+        "data_description": {
+          "host": "Die IP-Adresse Ihres Nanoleaf Controllers im lokalen Netzwerk",
+          "name": "Name für das Gerät (wird in Entity IDs verwendet)",
+          "pairing_mode": "Aktivieren Sie diese Option für eine automatische Kopplung. Deaktivieren Sie sie, wenn Sie bereits ein Token haben.",
+          "create_groups": "Erstellt Gruppen von Segmenten für schnellere Updates (empfohlen für Ambilight/Screen Mirroring)"
+        }
+      },
+      "pair": {
+        "title": "Nanoleaf Gerät koppeln",
+        "description": "Halten Sie jetzt die Power-Taste an Ihrem Nanoleaf Controller für 5-7 Sekunden gedrückt, bis die LED zu blinken beginnt. Klicken Sie dann auf 'Absenden'."
+      },
+      "token": {
+        "title": "Auth-Token eingeben",
+        "description": "Geben Sie Ihr vorhandenes Authentifizierungs-Token ein.",
+        "data": {
+          "token": "Authentifizierungs-Token"
+        },
+        "data_description": {
+          "token": "Das Auth-Token für die API-Authentifizierung"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung zum Nanoleaf-Gerät fehlgeschlagen. Bitte überprüfen Sie die IP-Adresse und stellen Sie sicher, dass das Gerät im Netzwerk erreichbar ist.",
+      "invalid_auth": "Das eingegebene Token ist ungültig. Bitte erstellen Sie ein neues Token oder verwenden Sie die Pairing-Option.",
+      "pairing_timeout": "Pairing-Timeout. Bitte stellen Sie sicher, dass Sie die Power-Taste am Nanoleaf Controller gedrückt haben und versuchen Sie es erneut.",
+      "unknown": "Ein unerwarteter Fehler ist aufgetreten. Bitte prüfen Sie die Logs."
+    },
+    "abort": {
+      "already_configured": "Dieses Nanoleaf-Gerät ist bereits in Home Assistant konfiguriert."
+    }
+  },
+  "options": {
+    "step": {
+      "groups": {
+        "title": "Manuelle Gruppen konfigurieren",
+        "description": "Definieren Sie Gruppen von Segmenten. {num_segments} Segmente verfügbar.\n\nFormat: Gruppen durch Semikolon getrennt, Segment-Indizes innerhalb durch Komma (0-basiert, erstes Segment = 0).\n\nBeispiel für 3 Gruppen à 3 Segmente:\n{example}\n\nLeer lassen für automatische Gruppierung.",
+        "data": {
+          "group_config": "Gruppen-Konfiguration"
+        }
+      }
+    },
+    "error": {
+      "invalid_group_config": "Ungültige Gruppen-Konfiguration. Bitte überprüfen Sie das Format (z.B. '0,1,2; 3,4,5')."
+    }
+  }
+}
+

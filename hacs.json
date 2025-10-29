@@ -1,0 +1,8 @@
+{
+  "name": "Nanoleaf Segments",
+  "render_readme": true,
+  "domains": ["light"],
+  "iot_class": "Local Polling",
+  "homeassistant": "2023.1.0"
+}
+

@@ -1,0 +1,6 @@
+.env
+nanoleaf_token.json
+nanoleaf_layout.json
+__pycache__/
+.DS_Store
+.venv/

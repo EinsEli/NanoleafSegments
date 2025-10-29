@@ -1,0 +1,60 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Nanoleaf Lines Setup",
+        "description": "Enter the IP address of your Nanoleaf controller and choose the setup method.",
+        "data": {
+          "host": "IP Address",
+          "name": "Device Name",
+          "pairing_mode": "Pair new device (button press required)",
+          "create_groups": "Create group entities"
+        },
+        "data_description": {
+          "host": "The IP address of your Nanoleaf controller on the local network",
+          "name": "Name for the device (used in entity IDs)",
+          "pairing_mode": "Enable this option to automatically pair a new device. Disable if you already have a token.",
+          "create_groups": "Creates groups of segments for faster updates (recommended for Ambilight/Screen Mirroring)"
+        }
+      },
+      "pair": {
+        "title": "Pair Nanoleaf Device",
+        "description": "Now hold the power button on your Nanoleaf controller for 5-7 seconds until the LED starts blinking. Then click 'Submit'."
+      },
+      "token": {
+        "title": "Enter Auth Token",
+        "description": "Enter your existing authentication token.",
+        "data": {
+          "token": "Auth Token"
+        },
+        "data_description": {
+          "token": "The authentication token for API access"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the Nanoleaf device. Please check the IP address and ensure the device is reachable on the network.",
+      "invalid_auth": "The provided token is invalid. Please create a new token or use the pairing option.",
+      "pairing_timeout": "Pairing timeout. Please make sure you pressed the power button on the Nanoleaf controller and try again.",
+      "unknown": "An unexpected error occurred. Please check the logs."
+    },
+    "abort": {
+      "already_configured": "This Nanoleaf device is already configured in Home Assistant."
+    }
+  },
+  "options": {
+    "step": {
+      "groups": {
+        "title": "Configure Manual Groups",
+        "description": "{num_segments} segments available.\n\nFormat: Groups separated by semicolon, segment indices within a group separated by comma (0-based, first segment = 0).\n\nExample for 3 groups with 3 segments each:\n{example}\n\nLeave empty for automatic grouping.",
+        "data": {
+          "group_config": "Group Configuration"
+        }
+      }
+    },
+    "error": {
+      "invalid_group_config": "Invalid group configuration. Please check the format (e.g. '0,1,2; 3,4,5')."
+    }
+  }
+}
+
